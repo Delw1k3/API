@@ -9,6 +9,16 @@
 		{
 			"name": "Authorization",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ZDBiMzI3YTlmYjVlNTc5ODA1ZDViMzU0MDA3MGEzODI0Mzg2Njc1ZTM0OTc4YWZiZDU1ZjIzNzJmZGI4MWIwZQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -57,7 +67,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "ZDBiMzI3YTlmYjVlNTc5ODA1ZDViMzU0MDA3MGEzODI0Mzg2Njc1ZTM0OTc4YWZiZDU1ZjIzNzJmZGI4MWIwZQ",
+							"value": "MTFjODllNWEwZjI4NWFjNTUwOTE3OWY0Mjk4YmY1NjVhYzc3OWZhMTE0Y2QyZWM3ZmVjOTlkNjg3MGE1NjYwNg",
 							"type": "string"
 						}
 					]
@@ -78,7 +88,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"contentType\": \"Task\",\r\n  \"name\": \"1\",\r\n  \"isUrgent\": false,\r\n  \"isTemplate\": false,\r\n  \"statement\": \"<p>Задача первого второму</p>\",\r\n  \"responsible\": {\r\n    \"id\": \"1000105\",\r\n    \"contentType\": \"Employee\"\r\n  },\r\n  \"deadline\": null,\r\n  \"parent\": null\r\n}\r\n",
+					"raw": "{\r\n  \"contentType\": \"Task\",\r\n  \"name\": \"ИВАН\",\r\n  \"isUrgent\": false,\r\n  \"isTemplate\": false,\r\n  \"statement\": \"<p>Задача первого второму</p>\",\r\n  \"responsible\": {\r\n    \"id\": \"1000105\",\r\n    \"contentType\": \"Employee\"\r\n  },\r\n  \"deadline\": null,\r\n  \"parent\": null\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -110,7 +120,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "NTM0NjM2ZGY0NDc4OTk0MzhkNjM3NDY5Mzk5MWFlZmNjNDM4MmU0NjRlMDRhNzE0MTcyMjIxZjQ3NjJlNTJmNg",
+							"value": "ODdmMjZlOWQ2NTg4ZjYxYTQ1NGU3ODAyZTA3NjZlZjM2YjdiY2Y2YzIzZGNmMzQ5MDVkODMyNzljZmVhYTQ0Mw",
 							"type": "string"
 						}
 					]
@@ -119,7 +129,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\":\"1011351\",\"contentType\":\"Task\",\"attaches\":[],\"statement\":\"<p>ОПИСАНИЕ ЗАДАЧИ ЛЮБОЙ ТЕКСТ ТРАЛЯЛЯЛЯЛя11232</p>\"}",
+					"raw": "{\"id\":\"1011363\",\"contentType\":\"Task\",\"attaches\":[],\"statement\":\"<p>Мой текст </p>\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -127,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/task/1011351/card/",
+					"raw": "https://radio-shop.megaplan.by/api/v3/task/1011363",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -135,10 +145,10 @@
 						"by"
 					],
 					"path": [
+						"api",
+						"v3",
 						"task",
-						"1011351",
-						"card",
-						""
+						"1011363"
 					]
 				}
 			},
@@ -205,7 +215,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "ZTNmYmUxMjBhMTU4MmJlOTY0NTJjMzg2OThlNzlmY2RjNzU1NWNjZmZjOGM2NWI3NTYwMjNmNTY1MmY2MGE2Zg",
+							"value": "MzYwYzJjY2VjMGVkMmZlN2EzZTU3M2MxNGE5OWY4NmQ5OTBjMzdlYTJkOThkNWM1ZDdmN2M1NTc5ZGNkNWI3Zg",
 							"type": "string"
 						}
 					]
@@ -214,7 +224,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{action: \"act_accept_task\", checkTodos: false}\r\naction\r\n: \r\n\"act_accept_task\"\r\ncheckTodos\r\n: \r\nfalse",
+					"raw": "{\"action\":\"act_accept_task\",\"checkTodos\":false}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -222,7 +232,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/task/1011352/card/",
+					"raw": "https://radio-shop.megaplan.by/api/v3/task/1011363/doAction",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -230,10 +240,11 @@
 						"by"
 					],
 					"path": [
+						"api",
+						"v3",
 						"task",
-						"1011352",
-						"card",
-						""
+						"1011363",
+						"doAction"
 					]
 				}
 			},
@@ -256,7 +267,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{action: \"act_done\", checkTodos: true}\r\naction\r\n: \r\n\"act_done\"\r\ncheckTodos\r\n: \r\ntrue",
+					"raw": "{\"action\":\"act_done\",\"checkTodos\":true}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -264,7 +275,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/task/1011352/card/",
+					"raw": "https://radio-shop.megaplan.by/api/v3/task/1011363/doAction",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -272,10 +283,11 @@
 						"by"
 					],
 					"path": [
+						"api",
+						"v3",
 						"task",
-						"1011352",
-						"card",
-						""
+						"1011363",
+						"doAction"
 					]
 				}
 			},
@@ -298,7 +310,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{contentType: \"CommentCreateActionRequest\",…}\r\ncomment\r\n: \r\n{contentType: \"Comment\", content: \"<p>Я закрыл задачу</p>\", attaches: [], workTime: null,…}\r\ncontentType\r\n: \r\n\"CommentCreateActionRequest\"\r\ntransports\r\n: \r\n[{}]",
+					"raw": "{\"entities\":[{\"id\":\"1011363\",\"contentType\":\"Task\"}],\"withNotifications\":true,\"contentType\":\"MassActionAppendCollection\",\"value\":[{\"contentType\":\"Comment\",\"content\":\"<p>123213</p>\",\"attaches\":[],\"workTime\":null,\"workDate\":{\"contentType\":\"DateTime\",\"value\":\"2025-02-28T19:36:13.082Z\"},\"completed\":0,\"owner\":{\"id\":\"1000105\",\"contentType\":\"Employee\"}}],\"field\":\"comments\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -306,7 +318,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/task/1011352/card/",
+					"raw": "https://radio-shop.megaplan.by/api/v3/massActionAppendCollection",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -314,10 +326,9 @@
 						"by"
 					],
 					"path": [
-						"task",
-						"1011352",
-						"card",
-						""
+						"api",
+						"v3",
+						"massActionAppendCollection"
 					]
 				}
 			},
@@ -326,6 +337,16 @@
 		{
 			"name": "Authorization Copy",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "M2I0YmZlNDFlM2JjMWI4ODZiZGJjMWI3ZDdkNWZiNjQzMTFjMDFjMjkzMjJhOTY0NWJiZTVjMmQ4MjUyNWU3Mw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -383,7 +404,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{action: \"act_accept_work\", checkTodos: true}\r\naction\r\n: \r\n\"act_accept_work\"\r\ncheckTodos\r\n: \r\ntrue",
+					"raw": "{\"action\":\"act_accept_work\",\"checkTodos\":true}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -391,7 +412,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/api/v3/task/1011353/doAction",
+					"raw": "https://radio-shop.megaplan.by/api/v3/task/1011363/doAction",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -402,7 +423,7 @@
 						"api",
 						"v3",
 						"task",
-						"1011353",
+						"1011363",
 						"doAction"
 					]
 				}
@@ -426,7 +447,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{entities: [{id: \"1011351\", contentType: \"Task\"}], withNotifications: false,…}\r\ncontentType\r\n: \r\n\"MassActionDelete\"\r\nentities\r\n: \r\n[{id: \"1011351\", contentType: \"Task\"}]\r\nwithNotifications\r\n: \r\nfalse",
+					"raw": "{\"entities\":[{\"id\":\"1011363\",\"contentType\":\"Task\"}],\"withNotifications\":false,\"contentType\":\"MassActionDelete\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -434,7 +455,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/task/filter/all",
+					"raw": "https://radio-shop.megaplan.by/api/v3/massActionDelete",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -442,9 +463,9 @@
 						"by"
 					],
 					"path": [
-						"task",
-						"filter",
-						"all"
+						"api",
+						"v3",
+						"massActionDelete"
 					]
 				}
 			},
